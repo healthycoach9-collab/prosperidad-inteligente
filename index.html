@@ -1,71 +1,36 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Prosperidad Inteligente</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --azul: #101827; --verde: #10B981; --gris: #F9FAFB; --blanco: #FFFFFF; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background: var(--gris); color: #4B5563; line-height: 1.6; }
-        
-        /* Estilo del Menú que me pediste */
-        header { background: var(--azul); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
-        .logo strong { color: var(--verde); }
-        nav { display: flex; gap: 10px; }
-        nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; padding: 8px 16px; border-radius: 8px; border: 1px solid transparent; transition: 0.3s; }
-        nav a:hover { color: white; }
-        
-        /* Recuadro verde para sección activa */
-        .nav-active { color: white !important; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--verde); }
-
-        /* Hero con botón animado */
-        .hero { background: linear-gradient(rgba(16,24,39,0.8), rgba(16,24,39,0.8)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1200'); background-size: cover; background-position: center; color: white; padding: 100px 10%; text-align: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; }
-        .btn-cta { background: var(--verde); color: white; padding: 16px 35px; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: 0.3s; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); text-transform: uppercase; }
-        .btn-cta:hover { transform: translateY(-3px); background: #059669; }
-
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2.5fr 1fr; gap: 30px; }
-        article { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        .sidebar-box { background: var(--azul); color: white; padding: 30px; border-radius: 12px; text-align: center; position: sticky; top: 100px; }
-    </style>
-</head>
-<body>
-<header>
-    <a href="index.html" class="logo">PROSPERIDAD <strong>INTELIGENTE</strong></a>
-    <nav>
-        <a href="index.html" class="nav-active">Inicio</a>
-        <a href="ahorro.html">Ahorro</a>
-        <a href="inversion.html">Inversión</a>
-        <a href="prestamos.html">Préstamos</a>
-        <a href="seguros.html">Seguros</a>
-    </nav>
-</header>
-
 <section class="hero">
-    <h1>Toma el Control de tu Futuro</h1>
-    <a href="ahorro.html#metodo-500" style="text-decoration:none;">
-        <button class="btn-cta">DESCUBRE CÓMO AHORRAR 500€ AL MES</button>
-    </a>
+    <h1>Multiplica tus ahorros con inteligencia</h1>
+    <p>La guía definitiva para alcanzar la libertad financiera en 2026.</p>
+    <a href="ahorro.html"><button class="btn-cta">DESCUBRE CÓMO AHORRAR 500€ AL MES</button></a>
 </section>
 
 <div class="container">
     <main>
-        <article>
-            <h2>Bienvenido a la Inversión Inteligente</h2>
-            <p>Aprende las estrategias que los expertos utilizan para multiplicar su capital sin riesgos innecesarios.</p>
-            <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=800" style="width:100%; border-radius:10px; margin-top:20px;">
-        </article>
+        <h2 style="margin-bottom:20px;">Últimas Guías Financieras</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="background:white; border-radius:12px; overflow:hidden; box-shadow:var(--sombra-card);">
+                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=400" style="width:100%; height:180px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="font-size:1.1rem; margin-bottom:10px;">Interés Compuesto: La Octava Maravilla</h3>
+                    <p style="font-size:0.85rem; margin-bottom:15px;">Entiende cómo el tiempo puede convertir pequeños ahorros en una fortuna.</p>
+                    <a href="inversion.html" style="color:var(--verde); font-weight:700; text-decoration:none; font-size:0.9rem;">LEER MÁS →</a>
+                </div>
+            </div>
+            <div style="background:white; border-radius:12px; overflow:hidden; box-shadow:var(--sombra-card);">
+                <img src="https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=400" style="width:100%; height:180px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="font-size:1.1rem; margin-bottom:10px;">Mejores Seguros de Vida 2026</h3>
+                    <p style="font-size:0.85rem; margin-bottom:15px;">No protejas solo tu dinero, protege a los que más quieres con estas pólizas.</p>
+                    <a href="seguros.html" style="color:var(--verde); font-weight:700; text-decoration:none; font-size:0.9rem;">LEER MÁS →</a>
+                </div>
+            </div>
+        </div>
     </main>
     <aside>
         <div class="sidebar-box">
-            <h3>Club VIP</h3>
-            <p style="font-size:0.9rem; margin-bottom:15px;">Accede a herramientas exclusivas.</p>
-            <button onclick="window.location.href='planes.html'" style="width:100%; padding:12px; background:var(--verde); border:none; color:white; border-radius:8px; font-weight:700; cursor:pointer;">SUSCRIBIRME 9.99€</button>
+            <h3>¿Buscas un Préstamo?</h3>
+            <p style="font-size:0.8rem; margin:15px 0;">Comparamos las mejores tasas del mercado para ti.</p>
+            <button onclick="window.location.href='prestamos.html'" style="width:100%; padding:10px; background:var(--verde); border:none; color:white; border-radius:5px; cursor:pointer; font-weight:bold;">VER COMPARATIVA</button>
         </div>
     </aside>
 </div>
-</body>
-</html>
