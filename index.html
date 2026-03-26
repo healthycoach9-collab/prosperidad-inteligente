@@ -6,19 +6,30 @@
     <title>Inicio | Prosperidad Inteligente</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --azul: #101827; --verde: #10B981; --gris: #F9FAFB; }
+        :root { --azul: #101827; --verde: #10B981; --gris: #F9FAFB; --blanco: #FFFFFF; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background: var(--gris); line-height: 1.6; }
-        header { background: var(--azul); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        body { font-family: 'Poppins', sans-serif; background: var(--gris); color: #4B5563; line-height: 1.6; }
+        
+        /* Estilo del Menú que me pediste */
+        header { background: var(--azul); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
         .logo strong { color: var(--verde); }
         nav { display: flex; gap: 10px; }
         nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; padding: 8px 16px; border-radius: 8px; border: 1px solid transparent; transition: 0.3s; }
+        nav a:hover { color: white; }
+        
+        /* Recuadro verde para sección activa */
         .nav-active { color: white !important; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--verde); }
-        .hero { background: linear-gradient(rgba(16,24,39,0.8), rgba(16,24,39,0.8)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1200'); background-size: cover; color: white; padding: 80px 10%; text-align: center; }
-        .btn-cta { background: var(--verde); color: white; padding: 15px 30px; border: none; border-radius: 50px; cursor: pointer; font-weight: 600; margin-top: 20px; }
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
-        article { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+        /* Hero con botón animado */
+        .hero { background: linear-gradient(rgba(16,24,39,0.8), rgba(16,24,39,0.8)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1200'); background-size: cover; background-position: center; color: white; padding: 100px 10%; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; }
+        .btn-cta { background: var(--verde); color: white; padding: 16px 35px; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: 0.3s; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); text-transform: uppercase; }
+        .btn-cta:hover { transform: translateY(-3px); background: #059669; }
+
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2.5fr 1fr; gap: 30px; }
+        article { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .sidebar-box { background: var(--azul); color: white; padding: 30px; border-radius: 12px; text-align: center; position: sticky; top: 100px; }
     </style>
 </head>
 <body>
@@ -32,15 +43,29 @@
         <a href="seguros.html">Seguros</a>
     </nav>
 </header>
+
 <section class="hero">
-    <h1>Domina tu Dinero en 2026</h1>
-    <a href="ahorro.html#metodo-500"><button class="btn-cta">DESCUBRE CÓMO AHORRAR 500€ AL MES</button></a>
+    <h1>Toma el Control de tu Futuro</h1>
+    <a href="ahorro.html#metodo-500" style="text-decoration:none;">
+        <button class="btn-cta">DESCUBRE CÓMO AHORRAR 500€ AL MES</button>
+    </a>
 </section>
+
 <div class="container">
-    <article>
-        <h2>Tu camino a la libertad financiera</h2>
-        <p>Bienvenido a Prosperidad Inteligente. Aquí aprenderás a gestionar tus activos de forma profesional.</p>
-    </article>
+    <main>
+        <article>
+            <h2>Bienvenido a la Inversión Inteligente</h2>
+            <p>Aprende las estrategias que los expertos utilizan para multiplicar su capital sin riesgos innecesarios.</p>
+            <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=800" style="width:100%; border-radius:10px; margin-top:20px;">
+        </article>
+    </main>
+    <aside>
+        <div class="sidebar-box">
+            <h3>Club VIP</h3>
+            <p style="font-size:0.9rem; margin-bottom:15px;">Accede a herramientas exclusivas.</p>
+            <button onclick="window.location.href='planes.html'" style="width:100%; padding:12px; background:var(--verde); border:none; color:white; border-radius:8px; font-weight:700; cursor:pointer;">SUSCRIBIRME 9.99€</button>
+        </div>
+    </aside>
 </div>
 </body>
 </html>
