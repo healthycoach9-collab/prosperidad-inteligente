@@ -1,43 +1,48 @@
-<main>
-    <article>
-        <h1>Guía Maestra de Inversión: Cómo Hacer Crecer tu Patrimonio</h1>
-        <p>Invertir no es solo para millonarios; es la herramienta para dejar de trabajar por dinero y que el dinero trabaje para ti.</p>
-        
-        <div class="adsense-placeholder" style="width: 336px; height: 280px; margin: 20px auto;">AdSense (336x280)</div>
+<div class="container">
+    <main>
+        <article>
+            <img src="https://images.unsplash.com/photo-1611974714851-eb6053e62359?q=80&w=1200&auto=format&fit=crop" alt="Gráficos de inversión" class="article-main-img">
+            <h1>Inversión: La Octava Maravilla del Mundo</h1>
+            <p>Invertir es la única forma comprobada de vencer a la inflación y generar riqueza generacional. No necesitas ser un lobo de Wall Street, solo necesitas tiempo y disciplina.</p>
 
-        <h2>La Magia del Interés Compuesto</h2>
-        <p>El interés compuesto es la octava maravilla del mundo. Quien lo entiende, lo gana; quien no, lo paga. A continuación, usa nuestra herramienta exclusiva para proyectar tus ganancias.</p>
+            <div class="adsense-placeholder" style="width: 336px; height: 280px; margin: 20px auto;">AdSense</div>
 
-        <div style="background:#e9ecef; padding:30px; border-radius:12px; margin:30px 0; border: 2px solid var(--verde-dinero);">
-            <h3 style="color:var(--azul-marino); margin-top:0;">Calculadora de Proyección Financiera</h3>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
-                <div>
-                    <label>Capital Inicial ($)</label>
-                    <input type="number" id="capital" placeholder="1000" style="width:90%; padding:10px;">
+            <h2>Calculadora de Interés Compuesto</h2>
+            <p>Visualiza cómo crecerá tu dinero. Ingresa tus datos abajo para ver el poder del tiempo sobre tu capital.</p>
+
+            <div style="background: var(--azul-marino); color: white; padding: 35px; border-radius: 15px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <label style="display:block; margin-bottom:8px; font-size:0.9rem;">Capital Inicial ($)</label>
+                        <input type="number" id="capital" placeholder="1000" style="width:100%; padding:12px; border-radius:5px; border:none;">
+                    </div>
+                    <div>
+                        <label style="display:block; margin-bottom:8px; font-size:0.9rem;">Retorno Anual Estimado (%)</label>
+                        <input type="number" id="interes" placeholder="8" style="width:100%; padding:12px; border-radius:5px; border:none;">
+                    </div>
+                    <div style="grid-column: span 2;">
+                        <label style="display:block; margin-bottom:8px; font-size:0.9rem;">Años de espera</label>
+                        <input type="number" id="años" placeholder="10" style="width:100%; padding:12px; border-radius:5px; border:none;">
+                    </div>
                 </div>
-                <div>
-                    <label>Interés Anual (%)</label>
-                    <input type="number" id="interes" placeholder="8" style="width:90%; padding:10px;">
-                </div>
-                <div style="grid-column: span 2;">
-                    <label>Años de Inversión</label>
-                    <input type="number" id="años" placeholder="10" style="width:95%; padding:10px;">
+                <button onclick="calcular()" style="background: var(--verde-dinero); color: white; width: 100%; padding: 15px; margin-top: 25px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1.1rem; text-transform: uppercase;">Simular Crecimiento</button>
+                <div style="text-align: center; margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <span style="font-size: 1rem; opacity: 0.8;">Tu Capital Final Estimado:</span>
+                    <h2 id="res-val" style="color: var(--verde-dinero); margin: 5px 0; font-size: 2.5rem;">$0.00</h2>
                 </div>
             </div>
-            <button onclick="calcular()" style="background:var(--verde-dinero); color:white; width:100%; padding:15px; margin-top:20px; border:none; cursor:pointer; font-weight:bold;">CALCULAR FUTURO</button>
-            <h3 style="text-align:center; margin-top:20px;">Tu Capital Final será: <span id="res-val" style="color:var(--verde-dinero);">$0.00</span></h3>
-        </div>
 
-        <script>
-            function calcular() {
-                const p = parseFloat(document.getElementById('capital').value);
-                const r = parseFloat(document.getElementById('interes').value) / 100;
-                const t = parseInt(document.getElementById('años').value);
-                if(p && r && t) {
-                    const result = p * Math.pow((1 + r), t);
-                    document.getElementById('res-val').innerText = '$' + result.toLocaleString('en-US', {maximumFractionDigits:2});
+            <script>
+                function calcular() {
+                    const p = parseFloat(document.getElementById('capital').value);
+                    const r = parseFloat(document.getElementById('interes').value) / 100;
+                    const t = parseInt(document.getElementById('años').value);
+                    if(p && r && t) {
+                        const res = p * Math.pow((1 + r), t);
+                        document.getElementById('res-val').innerText = '$' + res.toLocaleString('en-US', {maximumFractionDigits:2});
+                    }
                 }
-            }
-        </script>
-    </article>
-</main>
+            </script>
+        </article>
+    </main>
+</div>
