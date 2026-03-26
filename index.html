@@ -114,9 +114,15 @@
         </div>
     </main>
     <aside>
-        <div style="background:var(--azul); color:white; padding:25px; border-radius:12px; text-align:center;">
-    <h3>Club VIP</h3>
-    <p style="font-size:0.9rem; margin:15px 0;">Contenido exclusivo para suscriptores.</p>
+       @keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.btn-pay {
+  animation: pulse 2s infinite; /* Esto hará que el botón se mueva suavemente para atraer la vista */
+}
     
     <a href="planes.html" style="text-decoration: none;">
         <button style="width:100%; padding:12px; background:var(--verde); border:none; color:white; border-radius:8px; font-weight:700; cursor:pointer; transition: 0.3s;">
