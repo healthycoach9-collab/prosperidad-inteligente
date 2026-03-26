@@ -3,45 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inversión Inteligente | Prosperidad Inteligente</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Prosperidad Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --azul-marino: #1B263B;
-            --verde-dinero: #2D6A4F;
-            --gris-fondo: #F8F9FA;
+            --azul-oscuro: #101827;
+            --verde-acento: #10B981;
+            --gris-fondo: #F9FAFB;
             --blanco: #FFFFFF;
-            --texto-suave: #495057;
-            --sombra: 0 4px 15px rgba(0,0,0,0.08);
+            --texto: #4B5563;
         }
 
-        body { font-family: 'Roboto', sans-serif; margin: 0; background-color: var(--gris-fondo); color: #333; line-height: 1.8; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--gris-fondo); color: var(--texto); line-height: 1.6; }
+
+        /* --- NAVEGACIÓN ESTILO PREMIUM --- */
+        header { 
+            background: var(--azul-oscuro); 
+            padding: 1.2rem 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+        .logo strong { color: var(--verde-acento); }
         
-        header { background: var(--azul-marino); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: var(--sombra); }
-        .logo { color: var(--blanco); font-size: 1.6rem; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
-        .logo strong { color: var(--verde-dinero); }
-        nav { display: flex; gap: 20px; }
-        nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+        nav { display: flex; gap: 10px; }
+        nav a { 
+            color: rgba(255,255,255,0.7); 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            padding: 8px 16px; 
+            border-radius: 8px; 
+            transition: all 0.3s ease; 
+            border: 1px solid transparent;
+        }
+        nav a:hover { color: white; }
 
-        .adsense-placeholder { background: #f1f3f5; border: 1px solid #dee2e6; margin: 25px auto; display: flex; align-items: center; justify-content: center; color: #adb5bd; text-transform: uppercase; font-size: 11px; font-weight: bold; border-radius: 4px; }
+        /* Clase para resaltar la sección actual (Como en tu imagen) */
+        .nav-active { 
+            color: white !important; 
+            background: rgba(16, 185, 129, 0.15); 
+            border: 1px solid var(--verde-acento); 
+        }
 
-        .container { display: grid; grid-template-columns: 2.5fr 1fr; gap: 40px; padding: 50px 8%; max-width: 1400px; margin: auto; }
-        
-        article { background: var(--blanco); padding: 40px; border-radius: 12px; box-shadow: var(--sombra); }
-        article h1 { color: var(--azul-marino); font-size: 2.5rem; margin-top: 0; }
-        article h2 { color: var(--azul-marino); font-size: 1.8rem; margin-top: 40px; border-left: 5px solid var(--verde-dinero); padding-left: 15px; }
-        .article-main-img { width: 100%; height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 30px; }
-
-        /* Calculadora Estilo Premium */
-        .calc-container { background: var(--azul-marino); color: white; padding: 30px; border-radius: 12px; margin: 30px 0; }
-        .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .calc-grid input { width: 100%; padding: 12px; border-radius: 5px; border: none; margin-top: 5px; }
-        .calc-btn { background: var(--verde-dinero); color: white; width: 100%; padding: 15px; margin-top: 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
-        .res-box { text-align: center; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
-
-        footer { background: #111; color: white; padding: 50px 8%; text-align: center; margin-top: 60px; }
-        
-        @media (max-width: 1024px) { .container { grid-template-columns: 1fr; } }
+        /* --- CUERPO DE LA PÁGINA --- */
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        article { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        h1 { color: var(--azul-oscuro); margin-bottom: 20px; font-size: 2.5rem; }
+        p { margin-bottom: 20px; font-size: 1.1rem; }
+        .main-img { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; margin-bottom: 30px; }
     </style>
 </head>
 <body>
@@ -49,80 +63,20 @@
 <header>
     <a href="index.html" class="logo">PROSPERIDAD <strong>INTELIGENTE</strong></a>
     <nav>
-        <a href="ahorro.html">Ahorro</a> 
-        <a href="inversion.html">Inversión</a> 
-        <a href="prestamos.html">Préstamos</a>
-        <a href="seguros.html">Seguros</a>
+        <a href="index.html" id="m-inicio">Inicio</a>
+        <a href="ahorro.html" id="m-ahorro">Ahorro</a>
+        <a href="inversion.html" id="m-inversion">Inversión</a>
+        <a href="prestamos.html" id="m-prestamos">Préstamos</a>
+        <a href="seguros.html" id="m-seguros">Seguros</a>
     </nav>
 </header>
 
-<div class="adsense-placeholder" style="width: 728px; height: 90px;">Publicidad AdSense</div>
-
 <div class="container">
-    <main>
-        <article>
-            <img src="https://images.unsplash.com/photo-1611974714851-eb6053e62359?q=80&w=1200&auto=format&fit=crop" class="article-main-img">
-            
-            <h1>Fondos Indexados: La Estrategia Inteligente</h1>
-            <p>Invertir en índices es la forma más segura de batir a la inflación. Al replicar el S&P 500, diversificas tu riesgo automáticamente entre las mejores empresas del mundo.</p>
-
-            <div class="adsense-placeholder" style="width: 336px; height: 280px; margin: 20px auto;">AdSense In-Article</div>
-
-            <h2>Simulador de Crecimiento</h2>
-            <div class="calc-container">
-                <div class="calc-grid">
-                    <div>
-                        <label>Capital Inicial ($)</label>
-                        <input type="number" id="capital" placeholder="1000">
-                    </div>
-                    <div>
-                        <label>Interés Anual (%)</label>
-                        <input type="number" id="interes" placeholder="8">
-                    </div>
-                    <div style="grid-column: span 2;">
-                        <label>Años a invertir</label>
-                        <input type="number" id="años" placeholder="10">
-                    </div>
-                </div>
-                <button class="calc-btn" onclick="calcular()">Calcular Futuro</button>
-                <div class="res-box">
-                    <span style="opacity:0.8">Resultado Estimado:</span>
-                    <h2 id="res-val" style="color:var(--verde-dinero); font-size: 2.5rem; margin:10px 0;">$0.00</h2>
-                </div>
-            </div>
-
-            <h2>Cómo empezar hoy</h2>
-            <p>Busca un broker regulado y utiliza el <strong>Dollar Cost Averaging</strong>. Invertir la misma cantidad cada mes es el secreto de los millonarios silenciosos.</p>
-        </article>
-    </main>
-
-    <aside>
-        <div style="background:var(--azul-marino); color:white; padding:25px; border-radius:12px; text-align:center;">
-            <h3>Newsletter</h3>
-            <p>Recibe guías de inversión cada semana.</p>
-            <input type="email" placeholder="Tu email" style="width:100%; padding:10px; border-radius:5px; border:none; margin-bottom:10px;">
-            <button style="background:var(--verde-dinero); border:none; color:white; width:100%; padding:10px; border-radius:5px; cursor:pointer;">Unirme</button>
-        </div>
-        <div class="adsense-placeholder" style="width: 160px; height: 600px;">AdSense Sidebar</div>
-    </aside>
+    <article>
+        <h1>Título de la Sección</h1>
+        <p>Contenido detallado para tus usuarios...</p>
+    </article>
 </div>
-
-<footer>
-    <p>&copy; 2026 Prosperidad Inteligente</p>
-    <p><a href="privacidad.html" style="color:white">Privacidad</a> | <a href="terminos.html" style="color:white">Términos</a></p>
-</footer>
-
-<script>
-    function calcular() {
-        const p = parseFloat(document.getElementById('capital').value);
-        const r = parseFloat(document.getElementById('interes').value) / 100;
-        const t = parseInt(document.getElementById('años').value);
-        if(p && r && t) {
-            const res = p * Math.pow((1 + r), t);
-            document.getElementById('res-val').innerText = '$' + res.toLocaleString('en-US', {maximumFractionDigits:2});
-        }
-    }
-</script>
 
 </body>
 </html>
