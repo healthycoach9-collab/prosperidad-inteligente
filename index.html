@@ -3,173 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Prosperidad Inteligente</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Prosperidad Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --azul-oscuro: #101827;
-            --verde-acento: #10B981;
-            --gris-fondo: #F9FAFB;
-            --blanco: #FFFFFF;
-            --texto-cuerpo: #4B5563;
-            --sombra-card: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--gris-fondo);
-            color: var(--texto-cuerpo);
-            line-height: 1.7;
-        }
-
-        /* --- MENÚ DE NAVEGACIÓN SUPERIOR (Sticky Header) --- */
-        header {
-            background: var(--azul-oscuro);
-            padding: 1.2rem 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
+        :root { --azul: #101827; --verde: #10B981; --gris: #F9FAFB; --blanco: #FFFFFF; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--gris); color: #4B5563; line-height: 1.6; }
+        
+        /* HEADER AZUL QUE QUERÍAS */
+        header { 
+            background: var(--azul); 
+            padding: 1rem 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
             z-index: 1000;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+        .logo strong { color: var(--verde); }
+        
+        nav a { 
+            color: rgba(255,255,255,0.8); 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            margin-left: 20px; 
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        /* RECUADRO VERDE EN INICIO */
+        .nav-active { 
+            background: rgba(16, 185, 129, 0.2); 
+            border: 1px solid var(--verde); 
+            color: white !important; 
         }
 
-        .logo {
-            color: var(--blanco);
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .logo strong {
-            color: var(--verde-acento);
-        }
-
-        nav a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-left: 20px;
-            font-weight: 400;
-            transition: var(--transition);
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--verde-acento);
-        }
-
-        /* --- SECCIÓN HERO PRINCIPAL --- */
-        .hero {
-            background: linear-gradient(rgba(16, 24, 39, 0.8), rgba(16, 24, 39, 0.9)), 
-                        url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
+        /* HERO CON IMAGEN */
+        .hero { 
+            background: linear-gradient(rgba(16,24,39,0.8), rgba(16,24,39,0.8)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1200'); 
+            background-size: cover; 
             background-position: center;
-            color: var(--blanco);
-            padding: 120px 10%;
-            text-align: center;
+            color: white; 
+            padding: 80px 10%; 
+            text-align: center; 
         }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            font-weight: 300;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-            opacity: 0.9;
-        }
-
-        /* Botón CTA Animado */
-        .btn-cta {
-            background-color: var(--verde-acento);
-            color: var(--blanco);
-            padding: 16px 35px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: var(--transition);
-            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
-        }
-
-        .btn-cta:hover {
-            transform: translateY(-3px);
-            background-color: #059669; /* Verde más oscuro al hover */
-        }
-
-        /* --- CONTENEDOR PRINCIPAL CON SIDEBAR --- */
-        .main-wrapper {
-            display: grid;
-            grid-template-columns: 2.6fr 1fr;
-            gap: 40px;
-            padding: 80px 8%;
-            max-width: 1400px;
-            margin: auto;
-        }
-
-        main h2 {
-            font-size: 2rem;
-            color: var(--azul-oscuro);
-            margin-bottom: 40px;
-        }
-
-        /* --- GRID DE ARTÍCULOS --- */
-        .article-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .article-card {
-            background: var(--blanco);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--sombra-card);
-            transition: var(--transition);
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .btn-cta { 
+            background: var(--verde); 
+            color: white; 
+            padding: 15px 30px; 
+            border: none; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            font-weight: 700; 
+            transition: 0.3s;
             text-decoration: none;
-            color: inherit;
+            display: inline-block;
         }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); }
 
-        .article-card:hover {
-            transform: translateY(-5px);
+        /* CONTENIDO */
+        .main-wrapper { 
+            max-width: 1200px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+            display: grid; 
+            grid-template-columns: 2fr 1fr; 
+            gap: 30px; 
         }
+        article { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card { background: white; margin-top: 20px; border-radius: 10px; overflow: hidden; border: 1px solid #eee; }
+        .card img { width: 100%; height: 150px; object-fit: cover; }
+        .card-body { padding: 15px; }
 
-        .article-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
+        footer { background: #111; color: white; padding: 30px; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
 
-        .article-body {
-            padding: 25px;
-        }
+<header>
+    <a href="index.html" class="logo">PROSPERIDAD <strong>INTELIGENTE</strong></a>
+    <nav>
+        <a href="index.html" class="nav-active">Inicio</a>
+        <a href="ahorro.html">Ahorro</a>
+        <a href="inversion.html">Inversión</a>
+        <a href="prestamos.html">Préstamos</a>
+        <a href="seguros.html">Seguros</a>
+    </nav>
+</header>
 
-        .article-body h3 {
-            font-size: 1.25rem;
-            color: var(--azul-oscuro);
-            margin-bottom: 15px;
-        }
+<section class="hero">
+    <h1>Multiplica tus ahorros con inteligencia</h1>
+    <p>La guía definitiva para alcanzar la libertad financiera en 2026.</p>
+    <br>
+    <a href="ahorro.html" class="btn-cta">DESCUBRE CÓMO AHORRAR 500€ AL MES</a>
+</section>
 
-        .article-body p {
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            color: var(--texto-cuerpo);
-        }
+<div class="main-wrapper">
+    <main>
+        <h2>Últimas Guías Financieras</h2>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=400">
+            <div class="card-body">
+                <h3>Interés Compuesto: La Octava Maravilla</h3>
+                <p>Entiende cómo el tiempo puede convertir pequeños ahorros en una fortuna.</p>
+                <a href="inversion.html" style="color:var(--verde); font-weight:700; text-decoration:none;">LEER MÁS →</a>
+            </div>
+        </div>
+    </main>
+    <aside>
+        <div style="background:var(--azul); color:white; padding:25px; border-radius:12px; text-align:center;">
+            <h3>Club VIP</h3>
+            <p style="font-size:0.9rem; margin:15px 0;">Contenido exclusivo para suscriptores.</p>
+            <button onclick="window.location.href='planes.html'" style="width:100%; padding:12px; background:var(--verde); border:none; color:white; border-radius:8px; font-weight:700; cursor:pointer;">SUSCRIBIRME 9.99€</button>
+        </div>
+    </aside>
+</div>
 
-        .read-more {
+<footer>
+    <p>&copy; 2026 Prosperidad Inteligente</p>
+    <p><a href="privacidad.html" style="color:white; font-size:0.8rem;">Privacidad</a> | <a href="terminos.html" style="color:white; font-size:0.8rem;">Términos</a></p>
+</footer>
+
+</body>
+</html>
