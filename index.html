@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosperidad Inteligente | Toma el control de tu futuro financiero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-marino: #1B263B;
+            --verde-dinero: #2D6A4F;
+            --gris-fondo: #F8F9FA;
+            --blanco: #FFFFFF;
+        }
+
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--gris-fondo); color: #333; line-height: 1.6; }
+        
+        /* Layout */
+        header { background: var(--azul-marino); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin-left: 15px; font-size: 0.9rem; font-weight: bold; }
+        
+        .adsense-placeholder { background: #ebebeb; border: 1px dashed #bbb; margin: 20px auto; display: flex; align-items: center; justify-content: center; color: #888; text-transform: uppercase; font-size: 12px; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1350&q=80'); 
+                background-size: cover; color: white; padding: 100px 10%; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .btn-cta { background: var(--verde-dinero); color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.1rem; font-weight: bold; }
+
+        /* Main Content & Sidebar */
+        .container { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; padding: 40px 5%; max-width: 1200px; margin: auto; }
+        article { background: var(--blanco); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        aside { position: sticky; top: 80px; height: fit-content; }
+
+        .newsletter-box { background: var(--azul-marino); color: white; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; }
+        .newsletter-box input { width: 90%; padding: 10px; margin-top: 10px; }
+
+        footer { background: #111; color: white; padding: 40px 5%; text-align: center; margin-top: 50px; }
+        
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">PROSPERIDAD <strong>INTELIGENTE</strong></div>
+    <nav>
+        <a href="#">Ahorro</a> <a href="#">Inversión</a> <a href="#">Créditos</a> <a href="#">Comparativas</a>
+    </nav>
+</header>
+
+<div class="adsense-placeholder" style="width: 728px; height: 90px;">Publicidad AdSense (728x90)</div>
+
+<section class="hero">
+    <h1>Toma el control de tu futuro financiero hoy</h1>
+    <p>Guías expertas sobre ahorro, inversión y gestión de crédito.</p>
+    <button class="btn-cta">Descubre cómo ahorrar $500 al mes</button>
+</section>
+
+<div class="container">
+    <main>
+        <article>
+            <h1>Cómo invertir en la bolsa siendo principiante: Guía 2026</h1>
+            <p>El primer paso para la libertad financiera no es ganar más, sino gestionar mejor...</p>
+            
+            <div class="adsense-placeholder" style="width: 300px; height: 250px; float: left; margin-right: 20px;">AdSense (300x250)</div>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+            <h2>Estrategias de Interés Compuesto</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+
+            <div class="adsense-placeholder" style="width: 336px; height: 280px; margin: 20px auto;">AdSense (336x280)</div>
+            
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+    </main>
+
+    <aside>
+        <div class="newsletter-box">
+            <h3>Guía Gratuita</h3>
+            <p>Ahorra tus primeros $1,000 con nuestro método paso a paso.</p>
+            <input type="email" placeholder="Tu mejor correo">
+            <button style="background:var(--verde-dinero); border:none; color:white; padding:10px 20px; margin-top:10px; width:100%; cursor:pointer;">Suscribirme</button>
+        </div>
+
+        <div class="adsense-placeholder" style="width: 160px; height: 600px;">AdSense (160x600)</div>
+        
+        <div style="background:#eee; padding:15px; border-radius:8px; margin-top:20px;">
+            <h4>Calculadora de Interés Compuesto</h4>
+            <small>Próximamente funcional con JS...</small>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <div class="adsense-placeholder" style="width: 300px; height: 250px;">Publicidad Footer</div>
+    <p>&copy; 2026 Prosperidad Inteligente. Todos los derechos reservados.</p>
+    <p><a href="#" style="color:#ccc;">Privacidad</a> | <a href="#" style="color:#ccc;">Términos</a> | <a href="#" style="color:#ccc;">Contacto</a></p>
+</footer>
+
+</body>
+</html>
+function calcularInteres(p, r, t) {
+    // A = P(1 + r/n)^(nt)
+    return p * Math.pow((1 + r), t);
+}
+// Esto permite que el usuario juegue con los números en el sidebar.
