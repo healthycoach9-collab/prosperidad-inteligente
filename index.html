@@ -1,58 +1,175 @@
-<section class="hero">
-    <h1>Multiplica tus ahorros con inteligencia</h1>
-    <p>La guía definitiva para alcanzar la libertad financiera en 2026.</p>
-    <a href="ahorro.html"><button class="btn-cta">DESCUBRE CÓMO AHORRAR 500€ AL MES</button></a>
-</section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Prosperidad Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-oscuro: #101827;
+            --verde-acento: #10B981;
+            --gris-fondo: #F9FAFB;
+            --blanco: #FFFFFF;
+            --texto-cuerpo: #4B5563;
+            --sombra-card: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
 
-<div class="container">
-    <main>
-        <h2 style="margin-bottom:20px;">Últimas Guías Financieras</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div style="background:white; border-radius:12px; overflow:hidden; box-shadow:var(--sombra-card);">
-                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=400" style="width:100%; height:180px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <h3 style="font-size:1.1rem; margin-bottom:10px;">Interés Compuesto: La Octava Maravilla</h3>
-                    <p style="font-size:0.85rem; margin-bottom:15px;">Entiende cómo el tiempo puede convertir pequeños ahorros en una fortuna.</p>
-                    <a href="inversion.html" style="color:var(--verde); font-weight:700; text-decoration:none; font-size:0.9rem;">LEER MÁS →</a>
-                </div>
-            </div>
-            <div style="background:white; border-radius:12px; overflow:hidden; box-shadow:var(--sombra-card);">
-                <img src="https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=400" style="width:100%; height:180px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <h3 style="font-size:1.1rem; margin-bottom:10px;">Mejores Seguros de Vida 2026</h3>
-                    <p style="font-size:0.85rem; margin-bottom:15px;">No protejas solo tu dinero, protege a los que más quieres con estas pólizas.</p>
-                    <a href="seguros.html" style="color:var(--verde); font-weight:700; text-decoration:none; font-size:0.9rem;">LEER MÁS →</a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <aside>
-        <div class="sidebar-box">
-            <h3>¿Buscas un Préstamo?</h3>
-            <p style="font-size:0.8rem; margin:15px 0;">Comparamos las mejores tasas del mercado para ti.</p>
-            <button onclick="window.location.href='prestamos.html'" style="width:100%; padding:10px; background:var(--verde); border:none; color:white; border-radius:5px; cursor:pointer; font-weight:bold;">VER COMPARATIVA</button>
-        </div>
-    </aside>
-</div>
-<footer style="background: #101827; color: white; padding: 60px 8%; margin-top: 50px; text-align: center; border-top: 4px solid #10B981;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <h3 style="color: #10B981; margin-bottom: 15px;">PROSPERIDAD <strong>INTELIGENTE</strong></h3>
-        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 25px auto;">
-            Tu portal de confianza para dominar el ahorro, la inversión y la libertad financiera en 2026.
-        </p>
-        
-        <div style="margin-bottom: 25px;">
-            <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px; font-size: 0.85rem;">Inicio</a>
-            <a href="ahorro.html" style="color: white; text-decoration: none; margin: 0 15px; font-size: 0.85rem;">Ahorro</a>
-            <a href="inversion.html" style="color: white; text-decoration: none; margin: 0 15px; font-size: 0.85rem;">Inversión</a>
-        </div>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 25px;">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--gris-fondo);
+            color: var(--texto-cuerpo);
+            line-height: 1.7;
+        }
 
-        <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">
-            &copy; 2026 Prosperidad Inteligente. Todos los derechos reservados. <br>
-            <a href="privacidad.html" style="color: #10B981; text-decoration: none;">Política de Privacidad</a> | 
-            <a href="terminos.html" style="color: #10B981; text-decoration: none;">Términos y Condiciones</a>
-        </p>
-    </div>
-</footer>
+        /* --- MENÚ DE NAVEGACIÓN SUPERIOR (Sticky Header) --- */
+        header {
+            background: var(--azul-oscuro);
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            color: var(--blanco);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo strong {
+            color: var(--verde-acento);
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-left: 20px;
+            font-weight: 400;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--verde-acento);
+        }
+
+        /* --- SECCIÓN HERO PRINCIPAL --- */
+        .hero {
+            background: linear-gradient(rgba(16, 24, 39, 0.8), rgba(16, 24, 39, 0.9)), 
+                        url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--blanco);
+            padding: 120px 10%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+        }
+
+        /* Botón CTA Animado */
+        .btn-cta {
+            background-color: var(--verde-acento);
+            color: var(--blanco);
+            padding: 16px 35px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            background-color: #059669; /* Verde más oscuro al hover */
+        }
+
+        /* --- CONTENEDOR PRINCIPAL CON SIDEBAR --- */
+        .main-wrapper {
+            display: grid;
+            grid-template-columns: 2.6fr 1fr;
+            gap: 40px;
+            padding: 80px 8%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        main h2 {
+            font-size: 2rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 40px;
+        }
+
+        /* --- GRID DE ARTÍCULOS --- */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .article-card {
+            background: var(--blanco);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--sombra-card);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .article-body {
+            padding: 25px;
+        }
+
+        .article-body h3 {
+            font-size: 1.25rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 15px;
+        }
+
+        .article-body p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            color: var(--texto-cuerpo);
+        }
+
+        .read-more {
