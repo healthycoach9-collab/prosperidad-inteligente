@@ -1,37 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamos | Prosperidad Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* [Copia el bloque <style> completo de arriba para mantener el diseño] */
+        :root { --azul: #101827; --verde: #10B981; --gris: #F9FAFB; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--gris); color: #4B5563; line-height: 1.6; }
+        header { background: var(--azul); padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+        .logo strong { color: var(--verde); }
+        nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; margin-left: 20px; padding: 8px 15px; border-radius: 8px; transition: 0.3s; border: 1px solid transparent; }
+        .nav-active { background: rgba(16, 185, 129, 0.2); border: 1px solid var(--verde) !important; color: white !important; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        article { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        table { width: 100%; border-collapse: collapse; margin-top: 25px; }
+        th { background: var(--azul); color: white; padding: 15px; text-align: left; }
+        td { padding: 15px; border-bottom: 1px solid #eee; }
+        footer { background: #111; color: white; padding: 30px; text-align: center; margin-top: 50px; }
+    </style>
+</head>
 <body>
 <header>
     <a href="index.html" class="logo">PROSPERIDAD <strong>INTELIGENTE</strong></a>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="ahorro.html">Ahorro</a>
-        <a href="inversion.html" class="nav-active">Inversión</a>
-        <a href="prestamos.html">Préstamos</a>
+        <a href="inversion.html">Inversión</a>
+        <a href="prestamos.html" class="nav-active">Préstamos</a>
         <a href="seguros.html">Seguros</a>
     </nav>
 </header>
 <div class="container">
     <article>
-        <h1>Inversión: La Guía para Principiantes</h1>
-        <p>El interés compuesto es tu mejor aliado. Calcula cuánto podrías tener en 10 años invirtiendo hoy.</p>
+        <h1>Comparador de Préstamos 2026</h1>
+        <p>Analizamos las entidades financieras para traerte las tasas más bajas del mercado.</p>
         
-        <div style="background:var(--azul); color:white; padding:30px; border-radius:12px; margin:30px 0; text-align:center;">
-            <h3 style="color:var(--verde); margin-bottom:15px;">Calculadora de Crecimiento (8% anual)</h3>
-            <input type="number" id="cap" placeholder="Cantidad inicial (€)" style="padding:12px; width:80%; border-radius:8px; border:none; margin-bottom:15px;">
-            <button onclick="calc()" style="background:var(--verde); color:white; padding:12px 30px; border:none; border-radius:8px; cursor:pointer; font-weight:700;">CALCULAR</button>
-            <h2 id="res" style="margin-top:20px; color:var(--verde);">Total: 0.00€</h2>
-        </div>
-        
-        <h3>Fondos Indexados</h3>
-        <p>La forma más inteligente y pasiva de invertir en el mercado global con comisiones mínimas.</p>
+        <table>
+            <thead>
+                <tr><th>Producto</th><th>Tasa TAE</th><th>Ventaja</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Préstamo Personal</td><td style="color:var(--verde); font-weight:bold;">4.5%</td><td>Sin comisiones</td></tr>
+                <tr><td>Hipoteca Fija</td><td style="color:var(--verde); font-weight:bold;">2.8%</td><td>Plazo hasta 30 años</td></tr>
+                <tr><td>Crédito Rápido</td><td style="color:var(--verde); font-weight:bold;">6.0%</td><td>Aprobación en 24h</td></tr>
+            </tbody>
+        </table>
     </article>
 </div>
-<script>
-    function calc(){
-        let v = document.getElementById('cap').value;
-        let r = v * Math.pow(1.08, 10);
-        document.getElementById('res').innerText = "Total: " + r.toLocaleString('es-ES', {style: 'currency', currency: 'EUR'});
-    }
-</script>
 <footer><p>&copy; 2026 Prosperidad Inteligente</p></footer>
 </body>
 </html>
