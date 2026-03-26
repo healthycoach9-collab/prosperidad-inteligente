@@ -3,80 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosperidad Inteligente</title>
+    <title>Inicio | Prosperidad Inteligente</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --azul-oscuro: #101827;
-            --verde-acento: #10B981;
-            --gris-fondo: #F9FAFB;
-            --blanco: #FFFFFF;
-            --texto: #4B5563;
-        }
-
+        :root { --azul: #101827; --verde: #10B981; --gris: #F9FAFB; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background: var(--gris-fondo); color: var(--texto); line-height: 1.6; }
-
-        /* --- NAVEGACIÓN ESTILO PREMIUM --- */
-        header { 
-            background: var(--azul-oscuro); 
-            padding: 1.2rem 8%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-        }
+        body { font-family: 'Poppins', sans-serif; background: var(--gris); line-height: 1.6; }
+        header { background: var(--azul); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
         .logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
-        .logo strong { color: var(--verde-acento); }
-        
+        .logo strong { color: var(--verde); }
         nav { display: flex; gap: 10px; }
-        nav a { 
-            color: rgba(255,255,255,0.7); 
-            text-decoration: none; 
-            font-size: 0.9rem; 
-            padding: 8px 16px; 
-            border-radius: 8px; 
-            transition: all 0.3s ease; 
-            border: 1px solid transparent;
-        }
-        nav a:hover { color: white; }
-
-        /* Clase para resaltar la sección actual (Como en tu imagen) */
-        .nav-active { 
-            color: white !important; 
-            background: rgba(16, 185, 129, 0.15); 
-            border: 1px solid var(--verde-acento); 
-        }
-
-        /* --- CUERPO DE LA PÁGINA --- */
-        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
-        article { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        h1 { color: var(--azul-oscuro); margin-bottom: 20px; font-size: 2.5rem; }
-        p { margin-bottom: 20px; font-size: 1.1rem; }
-        .main-img { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; margin-bottom: 30px; }
+        nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; padding: 8px 16px; border-radius: 8px; border: 1px solid transparent; transition: 0.3s; }
+        .nav-active { color: white !important; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--verde); }
+        .hero { background: linear-gradient(rgba(16,24,39,0.8), rgba(16,24,39,0.8)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1200'); background-size: cover; color: white; padding: 80px 10%; text-align: center; }
+        .btn-cta { background: var(--verde); color: white; padding: 15px 30px; border: none; border-radius: 50px; cursor: pointer; font-weight: 600; margin-top: 20px; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        article { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
-
 <header>
     <a href="index.html" class="logo">PROSPERIDAD <strong>INTELIGENTE</strong></a>
     <nav>
-        <a href="index.html" id="m-inicio">Inicio</a>
-        <a href="ahorro.html" id="m-ahorro">Ahorro</a>
-        <a href="inversion.html" id="m-inversion">Inversión</a>
-        <a href="prestamos.html" id="m-prestamos">Préstamos</a>
-        <a href="seguros.html" id="m-seguros">Seguros</a>
+        <a href="index.html" class="nav-active">Inicio</a>
+        <a href="ahorro.html">Ahorro</a>
+        <a href="inversion.html">Inversión</a>
+        <a href="prestamos.html">Préstamos</a>
+        <a href="seguros.html">Seguros</a>
     </nav>
 </header>
-
+<section class="hero">
+    <h1>Domina tu Dinero en 2026</h1>
+    <a href="ahorro.html#metodo-500"><button class="btn-cta">DESCUBRE CÓMO AHORRAR 500€ AL MES</button></a>
+</section>
 <div class="container">
     <article>
-        <h1>Título de la Sección</h1>
-        <p>Contenido detallado para tus usuarios...</p>
+        <h2>Tu camino a la libertad financiera</h2>
+        <p>Bienvenido a Prosperidad Inteligente. Aquí aprenderás a gestionar tus activos de forma profesional.</p>
     </article>
 </div>
-
 </body>
 </html>
