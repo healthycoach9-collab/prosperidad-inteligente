@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7800250286102140"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7800250286102140" crossorigin="anonymous"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Financiero | Prosperidad Inteligente</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Blog | Prosperidad Inteligente</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --azul: #101827; --verde: #10B981; --gris: #F9FAFB; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background: var(--gris); color: #4B5563; line-height: 1.6; }
+        body { font-family: 'Poppins', sans-serif; background: var(--gris); color: #4B5563; line-height: 1.6; margin: 0; }
+        
         header { background: var(--azul); padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
         .logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
         .logo strong { color: var(--verde); }
+        
         nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; margin-left: 20px; padding: 8px 15px; border-radius: 8px; transition: 0.3s; }
+        nav a:hover { color: white; background: rgba(16, 185, 129, 0.1); }
         .nav-active { background: rgba(16, 185, 129, 0.2); border: 1px solid var(--verde); color: white !important; }
-        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        .post { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        h1 { color: var(--azul); margin-bottom: 20px; border-left: 5px solid var(--verde); padding-left: 15px; }
-        h2 { color: var(--azul); margin: 25px 0 10px 0; }
-        .date { color: var(--verde); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; display: block; }
-        footer { background: #111; color: white; padding: 30px; text-align: center; margin-top: 50px; }
+
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        h1 { text-align: center; color: var(--azul); margin-bottom: 40px; font-size: 2.5rem; }
+
+        /* REJILLA DE ARTÍCULOS */
+        .grid-blog { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+
+        article { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+            border-top: 5px solid var(--verde); 
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        article:hover { transform: translateY(-5px); }
+
+        article h2 { color: var(--azul); font-size: 1.3rem; margin-bottom: 15px; }
+        article p { font-size: 0.95rem; color: #6B7280; margin-bottom: 20px; }
+        
+        .btn-leer { 
+            color: var(--verde); 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 0.9rem; 
+            display: flex; 
+            align-items: center; 
+        }
+        .btn-leer:hover { text-decoration: underline; }
+
+        footer { background: #111; color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
     </style>
 </head>
 <body>
@@ -31,135 +61,86 @@
     <a href="index.html" class="logo">PROSPERIDAD <strong>INTELIGENTE</strong></a>
     <nav>
         <a href="index.html">Inicio</a>
-        <a href="ahorro.html">Ahorro</a>
-        <a href="inversion.html">Inversión</a>
-        <a href="prestamos.html">Préstamos</a>
-        <a href="seguros.html">Seguros</a>
         <a href="blog.html" class="nav-active">Blog</a>
         <a href="contacto.html">Contacto</a>
     </nav>
 </header>
-<div class="container" style="margin-top: 40px; margin-bottom: 60px;">
-    <h1 style="text-align:center; color: var(--azul); margin-bottom: 40px;">Centro de Educación Financiera</h1>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+<div class="container">
+    <h1>Educación Financiera</h1>
+    
+    <div class="grid-blog">
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-inversion.html" style="text-decoration:none; color:var(--azul);">Cómo invertir tus primeros 100€</a></h2>
-            <p style="font-size: 0.9rem;">Empieza a construir tu patrimonio hoy mismo con poco capital.</p>
-            <a href="articulo-inversion.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>Cómo invertir tus primeros 100€</h2>
+            <p>Aprende a dar el primer paso en los mercados financieros sin arriesgar grandes ahorros.</p>
+            <a href="articulo-inversion.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-interes-compuesto.html" style="text-decoration:none; color:var(--azul);">La Magia del Interés Compuesto</a></h2>
-            <p style="font-size: 0.9rem;">Descubre por qué Einstein lo llamó la octava maravilla del mundo.</p>
-            <a href="articulo-interes-compuesto.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>Ahorra un 30% en tu Factura de Luz</h2>
+            <p>Optimiza tu consumo energético y reduce tus gastos mensuales con trucos sencillos.</p>
+            <a href="articulo-ahorro-luz.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-oro.html" style="text-decoration:none; color:var(--azul);">¿Es buen momento para invertir en Oro?</a></h2>
-            <p style="font-size: 0.9rem;">Analizamos el oro como activo refugio en tiempos de incertidumbre.</p>
-            <a href="articulo-oro.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
-        </article>
-<article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-ahorro-super.html" style="text-decoration:none; color:var(--azul);">Ahorrar en el Supermercado</a></h2>
-            <p style="font-size: 0.9rem;">10 trucos para combatir la inflación en tu cesta de la compra.</p>
-            <a href="articulo-ahorro-super.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>La Magia del Interés Compuesto</h2>
+            <p>Descubre por qué el tiempo es tu mejor aliado para hacer crecer tu patrimonio.</p>
+            <a href="articulo-interes-compuesto.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-fondo-emergencia.html" style="text-decoration:none; color:var(--azul);">El Fondo de Emergencia</a></h2>
-            <p style="font-size: 0.9rem;">Tu primer paso hacia la tranquilidad: cómo construir un colchón financiero.</p>
-            <a href="articulo-fondo-emergencia.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>Ahorrar en el Supermercado</h2>
+            <p>10 trucos para combatir la inflación de 2026 en tu cesta de la compra semanal.</p>
+            <a href="articulo-ahorro-super.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-tarjetas.html" style="text-decoration:none; color:var(--azul);">Crédito vs. Débito</a></h2>
-            <p style="font-size: 0.9rem;">Aprende las diferencias para evitar deudas innecesarias.</p>
-            <a href="articulo-tarjetas.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>El Fondo de Emergencia</h2>
+            <p>Cómo construir un colchón financiero para dormir tranquilo ante cualquier imprevisto.</p>
+            <a href="articulo-fondo-emergencia.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-ahorro-joven.html" style="text-decoration:none; color:var(--azul);">Guía de Ahorro para Jóvenes</a></h2>
-            <p style="font-size: 0.9rem;">Cómo empezar a construir tu futuro desde los 18 años.</p>
-            <a href="articulo-ahorro-joven.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>Crédito vs. Débito</h2>
+            <p>Domina tus tarjetas y aprende cuándo usar cada una para evitar pagar intereses.</p>
+            <a href="articulo-tarjetas.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-inflacion.html" style="text-decoration:none; color:var(--azul);">¿Qué es la Inflación?</a></h2>
-            <p style="font-size: 0.9rem;">Por qué tu dinero pierde valor y cómo puedes protegerte.</p>
-            <a href="articulo-inflacion.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>Guía de Ahorro para Jóvenes</h2>
+            <p>Consejos específicos para empezar a gestionar tus finanzas desde los 18 años.</p>
+            <a href="articulo-ahorro-joven.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-vivienda.html" style="text-decoration:none; color:var(--azul);">¿Comprar o Alquilar?</a></h2>
-            <p style="font-size: 0.9rem;">Analizamos cuál es la mejor opción para tu vivienda en 2026.</p>
-            <a href="articulo-vivienda.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>¿Qué es la Inflación?</h2>
+            <p>Aprende cómo proteger tus ahorros del aumento de precios y la pérdida de valor.</p>
+            <a href="articulo-inflacion.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-mentalidad.html" style="text-decoration:none; color:var(--azul);">Mentalidad de Riqueza</a></h2>
-            <p style="font-size: 0.9rem;">Los hábitos de las personas con libertad financiera.</p>
-            <a href="articulo-mentalidad.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>¿Comprar o Alquilar?</h2>
+            <p>Analizamos el mercado inmobiliario de 2026 para ayudarte a decidir tu futuro.</p>
+            <a href="articulo-vivienda.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--verde);">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-impuestos.html" style="text-decoration:none; color:var(--azul);">Guía Básica de Impuestos</a></h2>
-            <p style="font-size: 0.9rem;">Entiende el IRPF y cómo optimizar tu declaración de la renta.</p>
-            <a href="articulo-impuestos.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
-        </article>
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #3B82F6;">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-ahorro-luz.html" style="text-decoration:none; color:var(--azul);">Ahorra un 30% en tu factura de luz</a></h2>
-            <p style="font-size: 0.9rem;">Trucos prácticos para reducir el gasto energético en casa.</p>
-            <a href="articulo-ahorro-luz.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>Mentalidad de Riqueza</h2>
+            <p>Los hábitos diarios que transforman a ahorradores en personas financieramente libres.</p>
+            <a href="articulo-mentalidad.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #3B82F6;">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-ahorro-super.html" style="text-decoration:none; color:var(--azul);">10 Trucos para ahorrar en el Súper</a></h2>
-            <p style="font-size: 0.9rem;">Cómo combatir la inflación en tu cesta de la compra semanal.</p>
-            <a href="articulo-ahorro-super.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>Invertir en Oro</h2>
+            <p>¿Sigue siendo el metal precioso el mejor refugio ante las crisis económicas?</p>
+            <a href="articulo-oro.html" class="btn-leer">Leer artículo →</a>
         </article>
 
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #3B82F6;">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-ahorro-joven.html" style="text-decoration:none; color:var(--azul);">Guía de ahorro para jóvenes</a></h2>
-            <p style="font-size: 0.9rem;">Cómo empezar a ahorrar desde los 18 años con poco dinero.</p>
-            <a href="articulo-ahorro-joven.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
-        </article>
-
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #F59E0B;">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-fondo-emergencia.html" style="text-decoration:none; color:var(--azul);">El Fondo de Emergencia</a></h2>
-            <p style="font-size: 0.9rem;">Tu primer paso hacia la tranquilidad financiera.</p>
-            <a href="articulo-fondo-emergencia.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
-        </article>
-
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #F59E0B;">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-tarjetas.html" style="text-decoration:none; color:var(--azul);">Débito vs. Crédito</a></h2>
-            <p style="font-size: 0.9rem;">Aprende a diferenciar las tarjetas para no caer en deudas.</p>
-            <a href="articulo-tarjetas.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
-        </article>
-
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #F59E0B;">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-inflacion.html" style="text-decoration:none; color:var(--azul);">Entendiendo la Inflación</a></h2>
-            <p style="font-size: 0.9rem;">Por qué tu dinero guardado vale menos cada día.</p>
-            <a href="articulo-inflacion.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
-        </article>
-
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #EF4444;">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-vivienda.html" style="text-decoration:none; color:var(--azul);">Comprar vs. Alquilar en 2026</a></h2>
-            <p style="font-size: 0.9rem;">¿Qué opción te conviene más según tu perfil?</p>
-            <a href="articulo-vivienda.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
-        </article>
-
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #EF4444;">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-mentalidad.html" style="text-decoration:none; color:var(--azul);">Mentalidad de Riqueza</a></h2>
-            <p style="font-size: 0.9rem;">Los hábitos que separan a los ahorradores de los consumidores.</p>
-            <a href="articulo-mentalidad.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
-        </article>
-
-        <article class="post" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #EF4444;">
-            <h2 style="font-size: 1.2rem;"><a href="articulo-impuestos.html" style="text-decoration:none; color:var(--azul);">Impuestos Básicos para todos</a></h2>
-            <p style="font-size: 0.9rem;">Aprende a leer tu nómina y entender el IRPF.</p>
-            <a href="articulo-impuestos.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más →</a>
+        <article>
+            <h2>Guía Básica de Impuestos</h2>
+            <p>Entiende tu nómina, el IRPF y cómo optimizar tu declaración de la renta.</p>
+            <a href="articulo-impuestos.html" class="btn-leer">Leer artículo →</a>
         </article>
 
     </div>
@@ -167,6 +148,10 @@
 
 <footer>
     <p>&copy; 2026 Prosperidad Inteligente</p>
+    <div style="margin-top: 15px;">
+        <a href="privacidad.html" style="color: #9CA3AF; text-decoration: none; font-size: 0.8rem; margin: 0 10px;">Privacidad</a>
+        <a href="cookies.html" style="color: #9CA3AF; text-decoration: none; font-size: 0.8rem; margin: 0 10px;">Cookies</a>
+    </div>
 </footer>
 
 </body>
