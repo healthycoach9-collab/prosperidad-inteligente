@@ -21,27 +21,24 @@
         .nav-active { background: rgba(16, 185, 129, 0.2); border: 1px solid var(--verde); color: white !important; }
 
         /* HERO SECTION */
-        .hero { background: var(--azul); color: white; padding: 100px 8%; text-align: center; border-bottom: 8px solid var(--verde); }
-        .hero h1 { font-size: 3rem; margin: 0; line-height: 1.2; }
-        .hero p { font-size: 1.2rem; color: #9CA3AF; margin: 20px 0 40px; }
-        .btn-main { background: var(--verde); color: white; padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; transition: 0.3s; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); }
-        .btn-main:hover { transform: scale(1.05); background: #059669; }
+        .hero { background: var(--azul); color: white; padding: 80px 8%; text-align: center; border-bottom: 8px solid var(--verde); }
+        .hero h1 { font-size: 2.8rem; margin: 0; line-height: 1.2; }
+        .hero p { font-size: 1.1rem; color: #9CA3AF; margin: 20px 0 30px; }
 
-        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 2.2rem; color: var(--azul); }
-        .section-title div { width: 60px; height: 4px; background: var(--verde); margin: 10px auto; }
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        
+        /* SECCIONES RECUPERADAS */
+        .seccion-texto { background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .seccion-texto h2 { color: var(--azul); border-left: 5px solid var(--verde); padding-left: 15px; margin-bottom: 20px; }
 
-        /* CARDS */
-        .grid-featured { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; border: 1px solid #E5E7EB; }
-        .card:hover { border-color: var(--verde); transform: translateY(-10px); }
-        .card h3 { color: var(--azul); margin-bottom: 15px; }
-        .card-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        /* REJILLA DE ARTÍCULOS DESTACADOS */
+        .grid-featured { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
+        .card { background: #fff; padding: 30px; border-radius: 15px; text-align: center; border: 1px solid #eee; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--verde); }
+        .card h3 { color: var(--azul); font-size: 1.2rem; }
 
-        footer { background: #111; color: white; padding: 60px 20px; text-align: center; }
-        .footer-links a { color: #9CA3AF; text-decoration: none; margin: 0 15px; font-size: 0.9rem; }
-        .footer-links a:hover { color: var(--verde); }
+        footer { background: #111; color: white; padding: 50px 20px; text-align: center; margin-top: 60px; }
+        .footer-links a { color: #9CA3AF; text-decoration: none; margin: 0 10px; font-size: 0.85rem; }
     </style>
 </head>
 <body>
@@ -56,57 +53,51 @@
 </header>
 
 <section class="hero">
-    <h1>Domina tu dinero,<br>diseña tu futuro.</h1>
-    <p>Aprende estrategias reales de ahorro, inversión y finanzas personales para alcanzar la libertad que mereces.</p>
-    <a href="blog.html" class="btn-main">Empieza a Leer Gratis</a>
+    <h1>Bienvenido a Prosperidad Inteligente</h1>
+    <p>Tu recurso número uno para aprender a gestionar, ahorrar e invertir tu dinero con cabeza.</p>
 </section>
 
 <div class="container">
-    <div class="section-title">
-        <h2>Temas Destacados</h2>
-        <div></div>
+    
+    <div class="seccion-texto">
+        <h2>¿Qué es la Prosperidad Inteligente?</h2>
+        <p>No se trata de cuánto ganas, sino de cómo lo gestionas. Nuestra misión es darte las herramientas necesarias para que el dinero deje de ser una preocupación y pase a ser un aliado en tu vida.</p>
     </div>
 
+    <div class="seccion-texto">
+        <h2>Nuestro Enfoque</h2>
+        <p>Combinamos educación financiera clásica con las tendencias de 2026. Analizamos desde el interés compuesto hasta cómo optimizar tu presupuesto mensual frente a la inflación actual.</p>
+    </div>
+
+    <h2 style="text-align:center; color: var(--azul); margin-top: 60px;">Artículos Destacados</h2>
     <div class="grid-featured">
         <div class="card">
-            <span class="card-icon">📈</span>
-            <h3>Inversión Inteligente</h3>
-            <p>Desde tus primeros 100€ hasta el interés compuesto. Haz que tu dinero trabaje para ti.</p>
-            <a href="articulo-inversion.html" style="color: var(--verde); font-weight:700; text-decoration:none;">Ver más →</a>
+            <h3>📈 Inversión</h3>
+            <p>Cómo empezar con tus primeros 100€.</p>
+            <a href="articulo-inversion.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más</a>
         </div>
-
         <div class="card">
-            <span class="card-icon">💡</span>
-            <h3>Ahorro Estratégico</h3>
-            <p>Reduce facturas, optimiza tu compra y crea un fondo de emergencia sólido.</p>
-            <a href="articulo-ahorro-luz.html" style="color: var(--verde); font-weight:700; text-decoration:none;">Ver más →</a>
-        </article>
-
+            <h3>💡 Ahorro</h3>
+            <p>Trucos para bajar tu factura de luz hoy mismo.</p>
+            <a href="articulo-ahorro-luz.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más</a>
+        </div>
         <div class="card">
-            <span class="card-icon">🧠</span>
-            <h3>Mentalidad</h3>
-            <p>Desarrolla los hábitos necesarios para pasar de consumidor a inversor exitoso.</p>
-            <a href="articulo-mentalidad.html" style="color: var(--verde); font-weight:700; text-decoration:none;">Ver más →</a>
+            <h3>🧠 Mentalidad</h3>
+            <p>Los hábitos que te harán libre financieramente.</p>
+            <a href="articulo-mentalidad.html" style="color:var(--verde); font-weight:700; text-decoration:none;">Leer más</a>
         </div>
     </div>
+
 </div>
 
-<section style="background: white; padding: 80px 0; text-align: center;">
-    <div class="container">
-        <h2 style="color: var(--azul);">¿Listo para mejorar tus finanzas?</h2>
-        <p style="margin-bottom: 30px;">Únete a miles de lectores que ya están tomando el control de su prosperidad.</p>
-        <a href="blog.html" style="color: var(--verde); font-weight: 700; text-decoration: underline;">Explorar todos los artículos</a>
-    </div>
-</section>
-
 <footer>
-    <p style="font-weight: 700; font-size: 1.2rem; margin-bottom: 20px;">PROSPERIDAD <strong>INTELIGENTE</strong></p>
+    <p>PROSPERIDAD <strong>INTELIGENTE</strong></p>
     <div class="footer-links">
         <a href="privacidad.html">Privacidad</a>
         <a href="cookies.html">Cookies</a>
         <a href="contacto.html">Contacto</a>
     </div>
-    <p style="color: #4B5563; font-size: 0.8rem; margin-top: 30px;">&copy; 2026 Prosperidad Inteligente. Todos los derechos reservados.</p>
+    <p style="color: #4B5563; font-size: 0.8rem; margin-top: 20px;">&copy; 2026 Prosperidad Inteligente. Tu libertad empieza aquí.</p>
 </footer>
 
 </body>
