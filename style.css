@@ -101,3 +101,57 @@ footer {
 }
 
 footer a { color: #fff; }
+/* --- BANNER DE COOKIES --- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 15px 5%;
+    display: none; /* Se mantiene oculto hasta que el código detecte si es necesario */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    box-sizing: border-box;
+}
+
+.cookie-banner p {
+    margin: 0;
+    font-size: 0.9rem;
+    max-width: 70%;
+}
+
+.cookie-banner a {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-buttons .btn-rechazar {
+    background-color: #555;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    .cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .cookie-banner p {
+        max-width: 100%;
+    }
+}
