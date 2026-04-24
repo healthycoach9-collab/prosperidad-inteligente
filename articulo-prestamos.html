@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamos Personales: TIN vs TAE | Prosperidad Inteligente</title>
+    <meta name="description" content="Aprende la diferencia entre TIN y TAE antes de pedir un préstamo personal. Evita comisiones ocultas y seguros abusivos vinculados.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">Prosperidad<span>Inteligente</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="fondo-emergencia.html">Finanzas</a></li>
+                <li><a href="articulo-mentalidad.html">Mentalidad</a></li>
+                <li><a href="articulo-inversion.html">Inversión</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 850px; padding: 50px 0;">
+        <article>
+            <div style="background-color: #eef9f1; color: #27ae60; display: inline-block; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 20px;">FINANCIACIÓN</div>
+            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 20px;">Préstamos Personales: Diferencias entre TIN y TAE</h1>
+            <p><i>Por el equipo editorial de Prosperidad Inteligente • Actualizado: Abril 2026</i></p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 40px;">
+
+            <img src="foto-prestamos.png" alt="Conceptos básicos de préstamos personales TIN y TAE" style="width: 100%; height: auto; display: block; margin-bottom: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+
+            <p>Necesitas comprar un coche, hacer una reforma en casa o pagar un imprevisto grande. Vas al banco y te ofrecen un préstamo con un "TIN increíblemente bajo". Si firmas solo mirando ese número, es muy probable que estés cayendo en una trampa de marketing financiero.</p>
+
+            <h2>El engaño del TIN (Tipo de Interés Nominal)</h2>
+            <p>El TIN es simplemente el porcentaje que el banco te cobra por prestarte el dinero. Pero no incluye absolutamente nada más. Es el cebo para que el préstamo parezca barato.</p>
+
+            <h2>La verdad absoluta: La TAE (Tasa Anual Equivalente)</h2>
+            <p>La TAE es el número en el que <strong>siempre</strong> debes fijarte. Es el coste REAL del préstamo. La TAE incluye el TIN, más las comisiones de apertura, comisiones de estudio, y cualquier seguro de vida o de protección de pagos que el banco te obligue a contratar.</p>
+            <p>Un banco puede ofrecerte un TIN del 4% y otro del 6%. Pero si el primero te cobra una comisión de apertura de 500€ y te obliga a pagar un seguro carísimo, su TAE puede dispararse al 9%, mientras que el segundo banco tiene una TAE del 6,5%.</p>
+
+            <div style="background: #fdfae6; padding: 25px; border-radius: 10px; border-left: 5px solid #d35400; margin: 30px 0;">
+                <p><strong>🚨 Cuidado con la vinculación:</strong> Muchos bancos condicionan la concesión del préstamo a que domicilies la nómina o uses sus tarjetas de crédito. Valora si a largo plazo te compensa atarte a esa entidad financiera.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Prosperidad Inteligente. <a href="sobre-nosotros.html">Sobre Nosotros</a> | <a href="privacidad.html">Privacidad</a> | <a href="cookies.html">Cookies</a></p>
+        </div>
+    </footer>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Utilizamos cookies propias y de terceros para personalizar contenido y anuncios. <a href="cookies.html">Más información</a>.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="btn" style="border:none; cursor:pointer; background-color: var(--accent); color: white; padding: 10px 15px; border-radius: 5px;">Aceptar</button>
+            <button id="reject-cookies" class="btn-rechazar" style="background-color: #555; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Rechazar</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!localStorage.getItem("cookieConsent")) { document.getElementById("cookie-banner").style.display = "flex"; }
+            document.getElementById("accept-cookies").addEventListener("click", function() { localStorage.setItem("cookieConsent", "true"); document.getElementById("cookie-banner").style.display = "none"; });
+            document.getElementById("reject-cookies").addEventListener("click", function() { localStorage.setItem("cookieConsent", "false"); document.getElementById("cookie-banner").style.display = "none"; });
+        });
+    </script>
+</body>
+</html>
