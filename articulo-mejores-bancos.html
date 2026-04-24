@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mejores Bancos sin Comisiones 2026 | Prosperidad Inteligente</title>
+    <meta name="description" content="Comparativa de las mejores cuentas bancarias en España sin comisiones y sin necesidad de domiciliar nómina o recibos obligatorios.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">Prosperidad<span>Inteligente</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="fondo-emergencia.html">Finanzas</a></li>
+                <li><a href="articulo-mentalidad.html">Mentalidad</a></li>
+                <li><a href="articulo-inversion.html">Inversión</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 850px; padding: 50px 0;">
+        <article>
+            <div style="background-color: #eef9f1; color: #27ae60; display: inline-block; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 20px;">BANCA</div>
+            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 20px;">Los mejores bancos sin comisiones y sin nómina en España</h1>
+            <p><i>Por el equipo editorial de Prosperidad Inteligente • Actualizado: Abril 2026</i></p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 40px;">
+
+            <img src="foto-mejores-bancos.png" alt="Tarjetas y apps de bancos sin comisiones" style="width: 100%; height: auto; display: block; margin-bottom: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+
+            <p>Pagar a un banco para que te guarde tu propio dinero es un concepto del pasado. En 2026, la competencia es tan agresiva que ningún ahorrador inteligente debería soportar comisiones de mantenimiento o administración de cuenta.</p>
+
+            <h2>El fin de las ataduras</h2>
+            <p>Hasta hace poco, la única forma de tener una cuenta gratuita era domiciliar una nómina altísima y varios recibos. Hoy, los bancos digitales han cambiado las reglas del juego. Aquí están las mejores opciones actuales para operar totalmente gratis:</p>
+
+            <ul style="line-height: 1.8;">
+                <li><strong>Revolut y N26:</strong> Los reyes de los neo-bancos. Abres la cuenta desde el móvil en 5 minutos. Te dan IBAN local (español), transferencias gratuitas y tarjetas de débito ideales para viajar y pagar sin comisiones en otras divisas.</li>
+                <li><strong>Openbank:</strong> Avalado por la seguridad del Banco Santander, pero con un enfoque 100% online. Su "Cuenta Corriente Open" no tiene condiciones ocultas, es gratis para siempre e incluye tarjeta de débito sin coste.</li>
+                <li><strong>BBVA Cuenta Online:</strong> El gigante tradicional que mejor se ha adaptado. Si eres nuevo cliente, su cuenta online no tiene comisiones de ningún tipo y no te exige domiciliar la nómina. Su App es considerada una de las mejores del mundo.</li>
+            </ul>
+
+            <div style="background: #eef9f1; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                <p><strong>💡 Regla de Diversificación:</strong> La prosperidad inteligente dicta que no debes tener todo tu dinero en el mismo banco. Usa un banco tradicional para el día a día (pagos, nómina, hipoteca) y un neo-banco sin comisiones para viajes o apartar tu fondo de emergencia.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Prosperidad Inteligente. <a href="sobre-nosotros.html">Sobre Nosotros</a> | <a href="privacidad.html">Privacidad</a> | <a href="cookies.html">Cookies</a></p>
+        </div>
+    </footer>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Utilizamos cookies propias y de terceros para personalizar contenido y anuncios. <a href="cookies.html">Más información</a>.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="btn" style="border:none; cursor:pointer; background-color: var(--accent); color: white; padding: 10px 15px; border-radius: 5px;">Aceptar</button>
+            <button id="reject-cookies" class="btn-rechazar" style="background-color: #555; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Rechazar</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!localStorage.getItem("cookieConsent")) { document.getElementById("cookie-banner").style.display = "flex"; }
+            document.getElementById("accept-cookies").addEventListener("click", function() { localStorage.setItem("cookieConsent", "true"); document.getElementById("cookie-banner").style.display = "none"; });
+            document.getElementById("reject-cookies").addEventListener("click", function() { localStorage.setItem("cookieConsent", "false"); document.getElementById("cookie-banner").style.display = "none"; });
+        });
+    </script>
+</body>
+</html>
