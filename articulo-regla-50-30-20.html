@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Regla 50/30/20: Organiza tu Sueldo | Prosperidad Inteligente</title>
+    <meta name="description" content="Descubre cómo aplicar la regla 50/30/20 para gestionar tus ingresos, ahorrar sin esfuerzo y disfrutar de tu dinero en 2026.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">Prosperidad<span>Inteligente</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="fondo-emergencia.html">Finanzas</a></li>
+                <li><a href="articulo-mentalidad.html">Mentalidad</a></li>
+                <li><a href="articulo-inversion.html">Inversión</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 850px; padding: 50px 0;">
+        <article>
+            <div style="background-color: #eef9f1; color: #27ae60; display: inline-block; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 20px;">GESTIÓN</div>
+            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 20px;">La Regla 50/30/20: Cómo organizar tu sueldo en 2026 sin dejar de disfrutar</h1>
+            <p><i>Por el equipo editorial de Prosperidad Inteligente • Actualizado: Abril 2026</i></p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 40px;">
+
+            <img src="foto-regla-503020.png" alt="Gráfico de la regla 50 30 20 para ahorrar" style="width: 100%; height: auto; display: block; margin-bottom: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+
+            <p>Llegar a fin de mes no debería ser un deporte de riesgo. La mayoría de los problemas financieros no vienen por ganar poco, sino por no saber a dónde va cada euro que ganamos. La <strong>Regla 50/30/20</strong> es el sistema de presupuesto más famoso y efectivo del mundo por una razón: es simple, flexible y te permite ahorrar sin sentir que vives en la miseria.</p>
+
+            <h2>¿En qué consiste la Regla 50/30/20?</h2>
+            <p>Popularizada por la senadora Elizabeth Warren, esta regla divide tus ingresos netos (lo que te llega limpio al banco) en tres categorías maestras:</p>
+            
+            <ul style="line-height: 1.8;">
+                <li><strong>50% para Necesidades:</strong> Alquiler o hipoteca, luz, agua, comida básica, seguros y transporte. Lo esencial para sobrevivir.</li>
+                <li><strong>30% para Deseos:</strong> Aquí entra tu estilo de vida. Cenas fuera, suscripciones a Netflix, el gimnasio, ropa nueva o ese viaje de fin de semana.</li>
+                <li><strong>20% para Ahorro e Inversión:</strong> Este es el pago a tu "yo del futuro". Incluye el fondo de emergencia, pagar deudas o invertir en bolsa.</li>
+            </ul>
+
+            <h2>Paso a paso para aplicarla en España este 2026</h2>
+            <p>Para que esto funcione, necesitas realismo. Si vives en Madrid o Barcelona y el alquiler se lleva el 40% de tu sueldo, tendrás que ajustar los deseos drásticamente para mantener el 20% de ahorro. Recuerda que el <strong>20% es innegociable</strong> si buscas la prosperidad inteligente.</p>
+
+            <div style="background: #eef9f1; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                <p><strong>💡 Truco de Experto:</strong> Automatiza. El día que cobres la nómina, mueve ese 20% directamente a una <a href="articulo-cuentas-remuneradas.html">cuenta remunerada</a> o a tu Robo-advisor. Si no ves el dinero, no lo gastas.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Prosperidad Inteligente. <a href="sobre-nosotros.html">Sobre Nosotros</a> | <a href="privacidad.html">Privacidad</a> | <a href="cookies.html">Cookies</a></p>
+        </div>
+    </footer>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Utilizamos cookies propias y de terceros para personalizar contenido y anuncios. <a href="cookies.html">Más información</a>.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="btn" style="border:none; cursor:pointer; background-color: var(--accent); color: white; padding: 10px 15px; border-radius: 5px;">Aceptar</button>
+            <button id="reject-cookies" class="btn-rechazar" style="background-color: #555; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Rechazar</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!localStorage.getItem("cookieConsent")) { document.getElementById("cookie-banner").style.display = "flex"; }
+            document.getElementById("accept-cookies").addEventListener("click", function() { localStorage.setItem("cookieConsent", "true"); document.getElementById("cookie-banner").style.display = "none"; });
+            document.getElementById("reject-cookies").addEventListener("click", function() { localStorage.setItem("cookieConsent", "false"); document.getElementById("cookie-banner").style.display = "none"; });
+        });
+    </script>
+</body>
+</html>
